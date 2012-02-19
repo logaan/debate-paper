@@ -4,8 +4,13 @@
         [debate-paper.models.document core]))
 
 (defentity documents
-           (transform new)
+           (transform row-to-record)
            (entity-fields :id :name))
+
+(defn row-to-record [{id :id name :name}]
+  (meta
+    (.Document name)
+    {:id id}))
 
 (defn find-all []
   (select documents))

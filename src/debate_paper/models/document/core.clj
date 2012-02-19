@@ -1,8 +1,8 @@
 (ns debate-paper.models.document.core)
 
-(defrecord Document [id name])
+(defrecord Document [name])
 
 (defn new
-  ([map] (Document. (:id map) (:name map)))
-  ([id name] (Document. id name)))
+  ([map] (Document. (:name map)))
+  ([name] (Document. name)))
 
