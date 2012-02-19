@@ -2,5 +2,3 @@
   (:use [debate-paper.models.document sql]
         [clojure test]))
 
-
-

@@ -2,4 +2,3 @@
   (:use [debate-paper.models.document core]
         [clojure test]))
 
-
