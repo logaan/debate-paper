@@ -1,6 +1,7 @@
-(ns debate-paper.models.document-sql
+(ns debate-paper.models.document.sql
   (:use [korma core]
-        [debate-paper.models database document]))
+        [debate-paper.models database]
+        [debate-paper.models.document core]))
 
 (defentity documents
            (transform new)
@@ -12,6 +13,5 @@
 (defn find-by-id [id]
   (first
     (select documents
-            (where {:id id})
-            (limit 1))))
+            (where {:id id}))))
 

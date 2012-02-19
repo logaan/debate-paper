@@ -1,4 +1,4 @@
-(ns debate-paper.models.document)
+(ns debate-paper.models.document.core)
 
 (defrecord Document [id name])
 
